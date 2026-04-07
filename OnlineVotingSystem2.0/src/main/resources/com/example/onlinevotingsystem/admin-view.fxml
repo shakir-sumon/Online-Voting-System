@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.onlinevotingsystem.AdminController"
+            style="-fx-background-color: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);">
+
+    <StackPane AnchorPane.topAnchor="0"
+               AnchorPane.bottomAnchor="0"
+               AnchorPane.leftAnchor="0"
+               AnchorPane.rightAnchor="0">
+
+        <VBox alignment="CENTER" spacing="15">
+
+            <Label text="Admin Dashboard"
+                   style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: white;" />
+
+            <TextField fx:id="candidateNameField"
+                       promptText="Candidate Name"
+                       maxWidth="400" />
+
+            <Button text="Add Candidate"
+                    onAction="#handleAddCandidate"
+                    prefWidth="220" prefHeight="40" />
+
+            <Button text="Register Voter"
+                    onAction="#openVoterRegistration"
+                    prefWidth="220" prefHeight="40" />
+
+            <Button text="View Result"
+                    onAction="#handleViewResult"
+                    prefWidth="220" prefHeight="40" />
+
+            <TextArea fx:id="outputArea"
+                      editable="false"
+                      maxWidth="400"
+                      prefHeight="120" />
+
+        </VBox>
+
+    </StackPane>
+
+</AnchorPane>
